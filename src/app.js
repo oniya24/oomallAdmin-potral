@@ -37,7 +37,7 @@ export function render(oldRender) {
 export const request = {
   timeout: 5000,
   mode: 'cors',
-  // prefix: privilegePrefix,
+  prefix: privilegePrefix,
   errorHandler,
   errorConfig: {
     adaptor: (resData) => {
