@@ -1,4 +1,5 @@
 export const addAuth2Header = (url: string, options: any) => {
+  console.log("url",url)
   let auth_Token = localStorage.getItem('authorization');
   const headers = {
     'Content-Type': 'application/json;charset=UTF-8',

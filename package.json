@@ -21,6 +21,7 @@
   },
   "dependencies": {
     "@ant-design/pro-layout": "^6.5.0",
+    "@umijs/plugin-qiankun": "^2.22.0",
     "@umijs/preset-react": "1.x",
     "ahooks": "^2.9.6",
     "qiankun": "^2.4.0",

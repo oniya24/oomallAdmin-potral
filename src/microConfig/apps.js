@@ -8,14 +8,16 @@ import store from './redux';
 const AppsInfo = [
   {
     name: 'privilege', // app name registered
-    entry: 'http://oomalladmin.privilege.finetoo.top/',
+    // entry: 'http://oomalladmin.privilege.finetoo.top/',
+    entry: process.env.NODE_ENV == 'production'? 'http://oomalladmin.privilege.finetoo.top/' : 'http://localhost:8001',
     container: '#app-qiankun',
     activeRule: '/privilege',
+    
   },
   {
     name: 'goods', // app name registered
     // entry: '//oomallAdmin.micro.finetoo.top/goods',
-    entry: 'http://oomalladmin.goods.finetoo.top/',
+    entry: process.env.NODE_ENV == 'production'? 'http://oomalladmin.goods.finetoo.top/' : 'http://localhost:8002',
     container: '#app-qiankun',
     activeRule: '/goods',
   },
