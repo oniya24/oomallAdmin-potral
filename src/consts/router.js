@@ -26,7 +26,7 @@ export const menuRouter = [
     ],
   },
   {
-    title: '商内管理',
+    title: '商铺管理',
     key: 'shop',
     routes: [
       {
@@ -35,24 +35,40 @@ export const menuRouter = [
         path: '/goods/comment',
       },
       {
+        title: '店内用户管理',
+        key: 'userManage',
+        path: '/order/userManage',
+      },
+      {
         title: '物品管理',
         key: 'goods',
         path: '/goods/shopGoods',
       },
       {
+        title: '店铺广告',
+        key: 'advertise',
+        path: '/order/advertise',
+      },
+    ],
+  },
+  {
+    title: '店铺活动',
+    key: 'shopActivity',
+    routes: [
+      {
         title: '优惠活动',
         key: 'coupon',
         path: '/goods/coupon',
       },
-      // {
-      //   title: "区域地址",
-      //   key: "address",
-      //   path: "/address",
-      // },
       {
-        title: '店铺活动',
+        title: '团购活动',
         key: 'shopActivity',
         path: '/goods/shopActivity',
+      },
+      {
+        title: '分享活动',
+        key: 'shopShare',
+        path: '/order/share',
       },
     ],
   },
@@ -68,7 +84,12 @@ export const menuRouter = [
       {
         title: '售后服务',
         key: 'aftersale',
-        path: '/aftersale',
+        path: '/order/aftersale',
+      },
+      {
+        title: '区域地址',
+        key: 'address',
+        path: '/order/address',
       },
     ],
   },

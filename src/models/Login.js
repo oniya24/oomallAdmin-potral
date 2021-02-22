@@ -36,7 +36,7 @@ export default {
         localStorage.setItem('authorization', data);
         message.success('登录成功');
         sessionStorage.removeItem('adminInfo');
-        history.push('/personal');
+        history.push('/privilege/personal');
       }
     },
   },
