@@ -86,11 +86,11 @@ export const menuRouter = [
         key: 'aftersale',
         path: '/order/aftersale',
       },
-      {
-        title: '区域地址',
-        key: 'address',
-        path: '/order/address',
-      },
+      // {
+      //   title: '区域地址',
+      //   key: 'address',
+      //   path: '/order/address',
+      // },
     ],
   },
   {

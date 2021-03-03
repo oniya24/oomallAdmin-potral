@@ -7,7 +7,15 @@ import store from '../../microConfig/redux';
 import { getUserReq } from '@/service/User';
 const { Header, Sider, Content } = Layout;
 const { SubMenu } = Menu;
+const sliceSecondPathname = (pathname) => {
+  return pathname
+    .split('/')
+    .slice(1, 3)
+    .reduce((prev, cur) => prev + '/' + cur, '');
+};
 const findDefaultSelectedKeys = (pathname) => {
+  pathname = sliceSecondPathname(pathname);
+  console.log(pathname);
   return (
     [
       menuRouter
@@ -19,6 +27,8 @@ const findDefaultSelectedKeys = (pathname) => {
   );
 };
 const findDefaultSubKeys = (pathname) => {
+  pathname = sliceSecondPathname(pathname);
+  console.log(pathname);
   return menuRouter
     .filter((item) => {
       return !!item.routes.some((v) => v.path == pathname);
@@ -28,6 +38,10 @@ const findDefaultSubKeys = (pathname) => {
 
 const Logged = (props) => {
   const { pathname } = useLocation();
+  console.log(pathname);
+  const [defaultSelectedKey, setDefaultSelectedKey] = useState(
+    findDefaultSelectedKeys(pathname),
+  );
   const [openKeys, setOpenKeys] = useState(findDefaultSubKeys(pathname));
   const [adminInfo, setAdminInfo] = useSessionStorageState(
     'adminInfo',
@@ -71,7 +85,7 @@ const Logged = (props) => {
           <Sider>
             <Menu
               // style={{ width: 256, height: '100%' }}
-              defaultSelectedKeys={['personal']}
+              defaultSelectedKeys={defaultSelectedKey}
               openKeys={openKeys}
               onOpenChange={handleSubMenuOpenChange}
               defaultOpenKeys={['setting']}
