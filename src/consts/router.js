@@ -66,6 +66,11 @@ export const menuRouter = [
         path: '/goods/shopActivity',
       },
       {
+        title: '活动时间',
+        key: 'time',
+        path: '/payment/time',
+      },
+      {
         title: '分享活动',
         key: 'shopShare',
         path: '/order/share',
@@ -73,24 +78,29 @@ export const menuRouter = [
     ],
   },
   {
-    title: '订单处理',
+    title: '订单管理',
     key: 'order',
     routes: [
       {
+        title: '订单处理',
+        key: 'order',
+        path: '/payment/order',
+      },
+      {
         title: '从订单跳转过来,订单支付',
         key: 'paymentPay',
-        path: '/paymentPay',
+        path: '/payment/paymentPay',
       },
       {
         title: '售后服务',
         key: 'aftersale',
         path: '/order/aftersale',
       },
-      // {
-      //   title: '区域地址',
-      //   key: 'address',
-      //   path: '/order/address',
-      // },
+      {
+        title: '地址模板',
+        key: 'freight',
+        path: '/payment/freight',
+      },
     ],
   },
   {

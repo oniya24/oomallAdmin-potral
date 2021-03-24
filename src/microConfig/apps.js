@@ -36,6 +36,16 @@ const AppsInfo = [
     container: '#app-qiankun',
     activeRule: '/order',
   },
+  {
+    name: 'payment', // app name registered
+    // entry: '//oomallAdmin.micro.finetoo.top/goods',
+    entry:
+      process.env.NODE_ENV == 'production'
+        ? 'http://oomalladmin.payment.finetoo.top/'
+        : 'http://localhost:8004',
+    container: '#app-qiankun',
+    activeRule: '/payment',
+  },
 ];
 
 const microApps = AppsInfo.map((item) => {
