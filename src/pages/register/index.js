@@ -15,7 +15,14 @@ const register = ({ registerAdmin }) => {
   };
 
   return (
-    <Card>
+    <Card
+      style={{
+        height: '100%',
+        width: '100%',
+        background: 'none',
+        border: 'none',
+      }}
+    >
       <PageHeader
         onBack={() => redirectRoute('/login')}
         title="返回"

@@ -28,7 +28,14 @@ const Login = ({ loginLoading, login }) => {
   };
 
   return (
-    <Card style={{ height: '100%', width: '100%' }}>
+    <Card
+      style={{
+        height: '100%',
+        width: '100%',
+        background: 'none',
+        border: 'none',
+      }}
+    >
       <PageHeader title="登录"></PageHeader>
       <Form
         {...layout}

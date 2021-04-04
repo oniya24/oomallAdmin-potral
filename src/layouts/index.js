@@ -14,7 +14,7 @@ const layout = (props) => {
       <Container>
         <div
           id="app-qiankun"
-          style={{ overflow: 'scroll', width: '100%', height: '100%' }}
+          style={{ overflow: 'auto', width: '100%', height: '100%' }}
         >
           {props.children}
         </div>
