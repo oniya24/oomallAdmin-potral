@@ -123,7 +123,7 @@ export const menuRouter = [
 
 export const privilegePrefix =
   process.env.NODE_ENV == 'production'
-    ? 'http://localhost:8080/privilege/'
+    ? 'http://47.96.155.159:8080/privilege/'
     : '/api';
 
-export const nologRoutes = ['/login', '/register', '/404'];
+export const nologRoutes = ['/login', '/register', '/404', '/error'];
