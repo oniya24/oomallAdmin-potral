@@ -75,6 +75,16 @@ export const menuRouter = [
         key: 'shopShare',
         path: '/order/share',
       },
+      {
+        title: '预售活动',
+        key: 'presale',
+        path: '/payment/presale',
+      },
+      {
+        title: '秒杀活动',
+        key: 'flashsale',
+        path: '/payment/flashsale',
+      },
     ],
   },
   {
@@ -87,7 +97,7 @@ export const menuRouter = [
         path: '/payment/order',
       },
       {
-        title: '从订单跳转过来,订单支付',
+        title: '订单支付',
         key: 'paymentPay',
         path: '/payment/paymentPay',
       },
